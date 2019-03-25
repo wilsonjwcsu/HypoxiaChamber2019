@@ -23,16 +23,23 @@ namespace App1
     /// </summary>
     public sealed partial class MainPage : Page // from http://blog.chrisbriggsy.com/Beginners-guide-to-GPIO-Win10-IoT-Core-Insider-Preview/
     {
-        private const int LED_PIN = 27;
-       // private const int PB_PIN = 5;
+        private const int LED_PIN = 24;
+        
         private GpioPin pin;
-        private GpioPin pushButton;
-        private GpioPinValue pushButtonValue;
+       
+        private GpioPinValue PinValue;
+       
         public MainPage()
+        
         {
             this.InitializeComponent();
+            NavigationCacheMode = NavigationCacheMode.Required;
             Unloaded += MainPage_Unloaded;
+           
             InitGPIO();
+           
+
+
         }
         private void InitGPIO()
         {
@@ -43,35 +50,41 @@ namespace App1
                 GpioStatus.Text = "There is no GPIO controller on this device.";
                 return;
             }
-            pushButton = gpio.OpenPin(LED_PIN);
             pin = gpio.OpenPin(LED_PIN);
 
-           // pushButton.SetDriveMode(GpioPinDriveMode.Input); this is good
+
+
             pin.Write(GpioPinValue.Low);
             pin.SetDriveMode(GpioPinDriveMode.Output);
 
             GpioStatus.Text = "GPIO pin initialized correctly.";
+            
         }
         private void MainPage_Unloaded(object sender, object args)
         {
             pin.Dispose();
-            pushButton.Dispose();
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            pushButtonValue = pushButton.Read();
-            if (pushButtonValue == GpioPinValue.High)
+            PinValue = pin.Read();
+            if (PinValue == GpioPinValue.High)
             {
                 pin.Write(GpioPinValue.Low);
             }
-            else if (pushButtonValue == GpioPinValue.Low)
+            else if (PinValue == GpioPinValue.Low)
             {
                 pin.Write(GpioPinValue.High);
             }
         }
-    }
        
+
+           
+        }
+
     }
+
+
 
 

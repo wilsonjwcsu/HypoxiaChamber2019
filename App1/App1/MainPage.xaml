@@ -8,9 +8,11 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RenderTransformOrigin="0.475,0.512" Margin="0,-2,0,2">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock x:Name="GpioStatus" Text="Waiting to initialize GPIO..." TextAlignment="Center" FontSize="26.667" Margin="595,147,594,818" />
+        <TextBlock x:Name="GpioStatus" Text="Waiting to initialize GPIO..." Margin="10,202,10,10" TextAlignment="Center" FontSize="26.667" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <StackPanel/>
         <Button Content="Turn Servo" HorizontalAlignment="Center" Height="150" Margin="0,261,0,0" VerticalAlignment="Top" Width="491" Click="Button_Click"/>
+
     </Grid>
 </Page>
