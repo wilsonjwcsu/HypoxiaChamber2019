@@ -9,10 +9,34 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RenderTransformOrigin="0.475,0.512" Margin="0,-2,0,2">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock x:Name="GpioStatus" Text="Waiting to initialize GPIO..." Margin="10,202,10,10" TextAlignment="Center" FontSize="26.667" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-        <StackPanel/>
-        <Button Content="Turn Servo" HorizontalAlignment="Center" Height="150" Margin="0,261,0,0" VerticalAlignment="Top" Width="491" Click="Button_Click"/>
+        <!--<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
+        <!--Using code structure from https://www.c-sharpcorner.com/uploadfile/mahesh/wpf-textblock/ help-->
+        <TextBlock Name="TextBlock1" Height="30" Width="200"  
+    Text="Hello! I am a TextBlock."  
+    Margin="565,80,0,0" VerticalAlignment="Top"  
+    HorizontalAlignment="Left">
+        </TextBlock>
+
+        <Button Content="Turn Servo" HorizontalAlignment="Left" Height="150" Margin="47,290,0,0" VerticalAlignment="Top" Width="491" Click="Button_Click"/>
+        <!--<TextBlock x:Name="GpioStatus" Text="Waiting to initialize GPIO..." Height="38" Margin="438,775,465,187" TextAlignment="Center" FontSize="26.667" HorizontalAlignment="Right" VerticalAlignment="Stretch" />-->
+        <TextBlock Name="GpioStatus" Height="38" Width="700"
+                   Text="Waiting to initialize GPIO..."
+                   FontSize="26.667"
+                   Margin="0,0,0,0" VerticalAlignment="Center"
+                   HorizontalAlignment="Center">
+        </TextBlock>
+        <TextBlock Name="TestBlock" Height="35" Width="281"
+    Text="This is on original boot"
+    Margin="32,75,0,0" VerticalAlignment="Top"
+    HorizontalAlignment="Left">
+        </TextBlock>
+        <!--Button Content="Initialize MCP3008" HorizontalAlignment="Left" Height="76" Margin="586,331,0,0" VerticalAlignment="Top" Width="184" Click="Button_Click_1"/>-->
+        <Button Content="Update O2" HorizontalAlignment="Left" Height="72" Margin="239,121,0,0" VerticalAlignment="Top" Width="205" Click="UpdateO2_Click"  />
+        <Button Content="LightButton" HorizontalAlignment="Left" Height="76" Margin="573,131,0,0" VerticalAlignment="Top" Width="176" Click="Button_Click_2"/>
+
+
+
+        <!--<TextBlock x:Name="TestBlock" Text="This is the original boot" Height="35" Margin="0,841,489,124" TextWrapping="Wrap" HorizontalAlignment="Right" Width="281" FontSize="20"/>-->
 
     </Grid>
-</Page>
+</Page> 
