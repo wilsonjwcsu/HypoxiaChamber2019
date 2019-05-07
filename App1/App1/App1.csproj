@@ -99,6 +99,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MHZ16.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +129,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AdafruitClassLibrary">
+      <Version>1.0.7.1</Version>
+    </PackageReference>
+    <PackageReference Include="Magellanic.I2c">
+      <Version>0.0.4-alpha</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.1.9</Version>
     </PackageReference>

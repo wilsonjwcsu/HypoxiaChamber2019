@@ -11,28 +11,58 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RenderTransformOrigin="0.475,0.512" Margin="0,-2,0,2">
         <!--<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
         <!--Using code structure from https://www.c-sharpcorner.com/uploadfile/mahesh/wpf-textblock/ help-->
-        <TextBlock Name="TextBlock1" Height="30" Width="200"  
-    Text="Hello! I am a TextBlock."  
-    Margin="565,80,0,0" VerticalAlignment="Top"  
+        <TextBlock Name="TextBlock1" Height="35" Width="155"  
+    Text="NaN"  FontSize="30"
+    Margin="587,81,0,0" VerticalAlignment="Top"  
     HorizontalAlignment="Left">
         </TextBlock>
-
-        <Button Content="Turn Servo" HorizontalAlignment="Left" Height="150" Margin="47,290,0,0" VerticalAlignment="Top" Width="491" Click="Button_Click"/>
-        <!--<TextBlock x:Name="GpioStatus" Text="Waiting to initialize GPIO..." Height="38" Margin="438,775,465,187" TextAlignment="Center" FontSize="26.667" HorizontalAlignment="Right" VerticalAlignment="Stretch" />-->
-        <TextBlock Name="GpioStatus" Height="38" Width="700"
-                   Text="Waiting to initialize GPIO..."
-                   FontSize="26.667"
-                   Margin="0,0,0,0" VerticalAlignment="Center"
-                   HorizontalAlignment="Center">
+        <TextBlock Name="O2Title" Height="35" Width="280" FontSize="30"
+         Text="O2 Concentration: %"
+         Margin="311,81,0,0" VerticalAlignment="Top"
+         HorizontalAlignment="Left">
         </TextBlock>
+        <TextBlock Name="CO2Value" Height="35" Width="143" FontSize="30"
+         Text="NaN"
+         Margin="570,134,0,0" VerticalAlignment="Top"
+         HorizontalAlignment="Left">
+        </TextBlock>
+        <TextBlock Name="CO2Title" Height="35" Width="267" FontSize="30"
+         Text="CO2 Concentration: "
+         Margin="289,131,0,0" VerticalAlignment="Top"
+         HorizontalAlignment="Left">
+        </TextBlock>
+        <TextBlock Name="ErrorLine" Height="30" Width="316"
+         Text="No Error"
+         Margin="12,78,0,0" VerticalAlignment="Top"
+         HorizontalAlignment="Left">
+        </TextBlock>
+
+        <Button Content="Manuel N2 Control" HorizontalAlignment="Left" Height="77" Margin="47,363,0,0" VerticalAlignment="Top" Width="319" Click="Button_Click"/>
+        <!--<TextBlock x:Name="GpioStatus" Text="Waiting to initialize GPIO..." Height="38" Margin="438,775,465,187" TextAlignment="Center" FontSize="26.667" HorizontalAlignment="Right" VerticalAlignment="Stretch" />-->
+        <TextBlock Name="GpioStatus" Height="38" Width="312"
+                   Text="Waiting to initialize GPIO..."
+                   FontSize="26.667" VerticalAlignment="Top"
+                   HorizontalAlignment="Left" Margin="380,396,0,0"/>
         <TextBlock Name="TestBlock" Height="35" Width="281"
     Text="This is on original boot"
-    Margin="32,75,0,0" VerticalAlignment="Top"
+    Margin="373,437,0,0" VerticalAlignment="Top"
     HorizontalAlignment="Left">
         </TextBlock>
         <!--Button Content="Initialize MCP3008" HorizontalAlignment="Left" Height="76" Margin="586,331,0,0" VerticalAlignment="Top" Width="184" Click="Button_Click_1"/>-->
-        <Button Content="Update O2" HorizontalAlignment="Left" Height="72" Margin="239,121,0,0" VerticalAlignment="Top" Width="205" Click="UpdateO2_Click"  />
-        <Button Content="LightButton" HorizontalAlignment="Left" Height="76" Margin="573,131,0,0" VerticalAlignment="Top" Width="176" Click="Button_Click_2"/>
+        <Button Content="End Override" HorizontalAlignment="Left" Height="72" Margin="48,266,0,0" VerticalAlignment="Top" Width="205" Click="EndOverride_Click"  />
+        <Button Content="Light" HorizontalAlignment="Left" Height="63" Margin="274,271,0,0" VerticalAlignment="Top" Width="143" Click="Button_Click_2"/>
+        <Button Content="Fan Control" HorizontalAlignment="Left" Height="80" Margin="69,140,0,0" VerticalAlignment="Top" Width="191" Click="Fan_Click"/>
+        <TextBlock Name="O2Uppertag" HorizontalAlignment="Left" Height="26" Margin="546,195,0,0" Text="O2 Upper Limit" TextWrapping="Wrap" VerticalAlignment="Top" Width="107"/>
+        <TextBlock Name ="O2Upperlimitvalue" HorizontalAlignment="Left" Height="24" Margin="576,237,0,0" Text="NaN" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" />
+        <Button Content="\/" HorizontalAlignment="Left" Height="34" Margin="509,230,0,0" VerticalAlignment="Top" Width="48" Click="O2Upperraise_Click"/>
+        <Button Content="/\" HorizontalAlignment="Left" Height="35" Margin="638,232,0,0" VerticalAlignment="Top" Width="47" Click="O2Upperlower_Click"/>
+        <TextBlock Name="O2Lowertag" HorizontalAlignment="Left" Height="32" Margin="545,289,0,0" Text="O2 Lower Limit" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" />
+        <TextBlock Name ="O2Lowerlimitvalue" HorizontalAlignment="Left" Height="26" Margin="562,323,0,0" Text="NaN" TextWrapping="Wrap" VerticalAlignment="Top" Width="78">
+            
+        </TextBlock>
+        <Button Content="\/" HorizontalAlignment="Left" Height="35" Margin="503,321,0,0" VerticalAlignment="Top" Width="49" Click="O2Lowerraise_Click"/>
+        <Button Content="/\" HorizontalAlignment="Left" Height="35" Margin="637,324,0,0" VerticalAlignment="Top" Width="47" Click="O2Lowerlower_Click"/>
+
 
 
 
