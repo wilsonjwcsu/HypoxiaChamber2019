@@ -54,14 +54,14 @@
         <Button Content="Fan Control" HorizontalAlignment="Left" Height="80" Margin="69,140,0,0" VerticalAlignment="Top" Width="191" Click="Fan_Click"/>
         <TextBlock Name="O2Uppertag" HorizontalAlignment="Left" Height="26" Margin="546,195,0,0" Text="O2 Upper Limit" TextWrapping="Wrap" VerticalAlignment="Top" Width="107"/>
         <TextBlock Name ="O2Upperlimitvalue" HorizontalAlignment="Left" Height="24" Margin="576,237,0,0" Text="NaN" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" />
-        <Button Content="\/" HorizontalAlignment="Left" Height="34" Margin="509,230,0,0" VerticalAlignment="Top" Width="48" Click="O2Upperraise_Click"/>
-        <Button Content="/\" HorizontalAlignment="Left" Height="35" Margin="638,232,0,0" VerticalAlignment="Top" Width="47" Click="O2Upperlower_Click"/>
+        <Button Content="/\" HorizontalAlignment="Left" Height="34" Margin="509,230,0,0" VerticalAlignment="Top" Width="48" Click="O2Upperraise_Click"/>
+        <Button Content="\/" HorizontalAlignment="Left" Height="35" Margin="638,232,0,0" VerticalAlignment="Top" Width="47" Click="O2Upperlower_Click"/>
         <TextBlock Name="O2Lowertag" HorizontalAlignment="Left" Height="32" Margin="545,289,0,0" Text="O2 Lower Limit" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" />
         <TextBlock Name ="O2Lowerlimitvalue" HorizontalAlignment="Left" Height="26" Margin="562,323,0,0" Text="NaN" TextWrapping="Wrap" VerticalAlignment="Top" Width="78">
             
         </TextBlock>
-        <Button Content="\/" HorizontalAlignment="Left" Height="35" Margin="503,321,0,0" VerticalAlignment="Top" Width="49" Click="O2Lowerraise_Click"/>
-        <Button Content="/\" HorizontalAlignment="Left" Height="35" Margin="637,324,0,0" VerticalAlignment="Top" Width="47" Click="O2Lowerlower_Click"/>
+        <Button Content="/\" HorizontalAlignment="Left" Height="35" Margin="503,321,0,0" VerticalAlignment="Top" Width="49" Click="O2Lowerraise_Click"/>
+        <Button Content="\/" HorizontalAlignment="Left" Height="35" Margin="637,324,0,0" VerticalAlignment="Top" Width="47" Click="O2Lowerlower_Click"/>
 
 
 

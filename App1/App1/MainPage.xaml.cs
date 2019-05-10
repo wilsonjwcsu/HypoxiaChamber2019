@@ -261,23 +261,23 @@ namespace App1
 
         private void O2Upperraise_Click(object sender, RoutedEventArgs e)
         {
-            UpperO2Lim = UpperO2Lim + 314;
-            O2Upperlimitvalue.Text = UpperO2Lim.ToString();
+            UpperO2Lim = UpperO2Lim + 50;
+            O2Upperlimitvalue.Text = (factor * UpperO2Lim + Constant).ToString();
         }
         private void O2Upperlower_Click(object sender, RoutedEventArgs e)
         {
-            UpperO2Lim = UpperO2Lim - 314;
-            O2Upperlimitvalue.Text = UpperO2Lim.ToString();
+            UpperO2Lim = UpperO2Lim - 50;
+            O2Upperlimitvalue.Text = (factor * UpperO2Lim + Constant).ToString();
         }
         private void O2Lowerraise_Click(object sender, RoutedEventArgs e)
         {
-            LowerO2Lim = LowerO2Lim + 314;
-            O2Lowerlimitvalue.Text = LowerO2Lim.ToString();
+            LowerO2Lim = LowerO2Lim + 50;
+            O2Lowerlimitvalue.Text = (factor * LowerO2Lim + Constant).ToString();
         }
         private void O2Lowerlower_Click(object sender, RoutedEventArgs e)
         {
-            LowerO2Lim = LowerO2Lim - 314;
-            O2Lowerlimitvalue.Text = UpperO2Lim.ToString();
+            LowerO2Lim = LowerO2Lim - 50;
+            O2Lowerlimitvalue.Text = (factor *LowerO2Lim + Constant).ToString();
         }
     }
 
